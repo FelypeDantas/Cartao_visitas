@@ -3,21 +3,22 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Felype</title>
     <link rel="shortcut icon" href="./fotos/Felype.jpg.jpeg" type="image/x-icon">
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#f2dae7'
-                    },
-                    fontFamily: {
-                        titulo: ['Vast Shadow', 'cursive']
+                        primary: '#6366f1',
+                        dark: '#0f172a'
                     }
                 }
             }
@@ -25,45 +26,73 @@
     </script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen flex items-center justify-center">
 
-    <!-- Container geral -->
-    <div class="flex flex-col sm:flex-row justify-center items-center w-full my-10 px-4">
+    <!-- Card principal -->
+    <div class="flex flex-col sm:flex-row items-center gap-8 bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl rounded-2xl p-8 max-w-3xl w-full mx-4">
 
-        <!-- Imagem -->
-        <img class="w-40 h-40 sm:w-48 sm:h-48 md:w-56 md:h-56 rounded-full object-cover mb-6 sm:mb-0 sm:mr-6"
-            src="./fotos/Felype.jpg.jpeg" alt="Foto Felype">
+        <!-- Foto -->
+        <div class="relative">
+            <img src="./fotos/Felype.jpg.jpeg"
+                class="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover border-4 border-primary shadow-lg"
+                alt="Foto Felype">
 
-        <!-- Informações do perfil -->
-        <div class="p-6 bg-gradient-to-r from-purple-300 to-slate-400 text-center sm:text-left rounded-lg w-full sm:w-auto">
-            <p class="text-4xl font-black text-primary font-titulo sm:text-5xl md:text-6xl">Felype Dantas dos Santos</p>
-            <p class="text-3xl mb-4 sm:text-4xl md:text-5xl">CSA - BACK OFFICE</p>
-            
+            <!-- Glow -->
+            <div class="absolute inset-0 rounded-full blur-xl opacity-30 bg-primary"></div>
+        </div>
+
+        <!-- Info -->
+        <div class="text-center sm:text-left">
+
+            <!-- Nome -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
+                Felype Dantas dos Santos
+            </h1>
+
+            <!-- Profissão -->
+            <p class="text-lg sm:text-xl text-gray-300 mt-2">
+                Desenvolvedor Back-End | Java & Web
+            </p>
+
             <!-- Contato -->
-            <p class="text-lg mt-4"><a href="https://wa.me/5511946400631" target="_blank" class="hover:text-green-500"><i class="fab fa-whatsapp fa-lg"></i> (11) 94640-0631</a></p>
-            <p class="text-lg"><a href="mailto:felyped03@gmail.com" class="hover:text-blue-500"><i class="fas fa-envelope fa-lg"></i> felyped03@gmail.com</a></p>
-            
-            <!-- Redes sociais -->
-            <ul class="flex justify-center sm:justify-start gap-4 mt-4">
-                <li>
-                    <a href="https://www.linkedin.com/in/felype-dantas-dos-santos" target="_blank" title="LinkedIn"
-                        class="transition-transform transform hover:scale-110 hover:text-blue-500">
-                        <i class="fab fa-linkedin fa-2x"></i>
+            <div class="mt-4 space-y-2 text-gray-300">
+
+                <p>
+                    <a href="https://wa.me/5511946400631" target="_blank"
+                        class="hover:text-green-400 transition">
+                        <i class="fab fa-whatsapp"></i> (11) 94640-0631
                     </a>
-                </li>
-                <li>
-                    <a href="https://github.com/FelypeDantas" target="_blank" title="GitHub"
-                        class="transition-transform transform hover:scale-110 hover:text-gray-800">
-                        <i class="fab fa-github fa-2x"></i>
+                </p>
+
+                <p>
+                    <a href="mailto:felyped03@gmail.com"
+                        class="hover:text-blue-400 transition">
+                        <i class="fas fa-envelope"></i> felyped03@gmail.com
                     </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/felype_dantas_santos/" target="_blank" title="Instagram"
-                        class="transition-transform transform hover:scale-110 hover:text-pink-500">
-                        <i class="fab fa-instagram fa-2x"></i>
-                    </a>
-                </li>
-            </ul>
+                </p>
+
+            </div>
+
+            <!-- Redes -->
+            <div class="flex justify-center sm:justify-start gap-5 mt-5 text-gray-400">
+
+                <a href="https://www.linkedin.com/in/felype-dantas-dos-santos" target="_blank"
+                    class="hover:text-blue-500 transform hover:scale-110 transition">
+                    <i class="fab fa-linkedin fa-xl"></i>
+                </a>
+
+                <a href="https://github.com/FelypeDantas" target="_blank"
+                    class="hover:text-white transform hover:scale-110 transition">
+                    <i class="fab fa-github fa-xl"></i>
+                </a>
+
+                <a href="https://www.instagram.com/felype_dantas_santos/" target="_blank"
+                    class="hover:text-pink-500 transform hover:scale-110 transition">
+                    <i class="fab fa-instagram fa-xl"></i>
+                </a>
+
+            </div>
+
         </div>
     </div>
 
