@@ -1,101 +1,310 @@
+
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cartão de visitas - Felype</title>
-    <link rel="shortcut icon" href="./fotos/Felype.jpg.jpeg" type="image/x-icon">
+
+    <meta name="theme-color" content="#080c18">
+    <meta name="description"
+        content="Cartão profissional de Felype Dantas dos Santos. Desenvolvedor Back-End | Java & Web.">
+
+    <title>Felype Dantas | Desenvolvedor Back-End</title>
+
+    <link rel="shortcut icon" href="./fotos/Felype.jpg.jpeg"
+        type="image/x-icon">
 
     <script src="https://cdn.tailwindcss.com"></script>
 
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background:
+                radial-gradient(circle at 15% 20%, #312e81 0%, transparent 35%),
+                radial-gradient(circle at 85% 80%, #312e81 0%, transparent 30%),
+                #080c18;
+            overflow-x: hidden;
+        }
+
+        .card {
+            background: linear-gradient(
+                145deg,
+                rgba(255,255,255,0.09),
+                rgba(255,255,255,0.025)
+            );
+            border: 1px solid rgba(255,255,255,0.12);
+            box-shadow:
+                0 30px 80px rgba(0,0,0,0.45),
+                inset 0 1px rgba(255,255,255,0.08);
+            backdrop-filter: blur(25px);
+        }
+
+        .profile-image {
+            background: linear-gradient(135deg, #818cf8, #c084fc, #6366f1);
+            padding: 4px;
+            box-shadow: 0 0 35px rgba(129,140,248,0.25);
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #ffffff, #a5b4fc, #c4b5fd);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .contact-item {
+            transition: .3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateX(5px);
+            border-color: rgba(129,140,248,0.4);
+            background: rgba(129,140,248,0.08);
+        }
+
+        .social-link {
+            transition: .3s ease;
+        }
+
+        .social-link:hover {
+            transform: translateY(-5px);
+            color: #a5b4fc;
+            border-color: rgba(129,140,248,0.5);
+            background: rgba(129,140,248,0.12);
+        }
+
+        .shine {
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background: #6366f1;
+            filter: blur(120px);
+            opacity: .13;
+            pointer-events: none;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex items-center justify-center p-5 text-white">
+
+    <div class="shine top-0 left-0"></div>
+    <div class="shine bottom-0 right-0"></div>
+
+    <main class="relative w-full max-w-4xl">
+
+        <section class="card rounded-3xl overflow-hidden">
+
+            <!-- Linha superior -->
+            <div class="h-1 w-full bg-gradient-to-r from-indigo-500 via-purple-400 to-indigo-500"></div>
+
+            <div class="p-7 sm:p-10 md:p-12">
+
+                <!-- Identificação -->
+                <div class="flex items-center justify-between mb-10">
+
+                    <div class="flex items-center gap-2">
+                        <div class="w-2 h-2 rounded-full bg-green-400 shadow-lg shadow-green-400/50"></div>
+                        <span class="text-xs tracking-[0.2em] text-gray-400 uppercase font-semibold">
+                            Cartão profissional
+                        </span>
+                    </div>
+
+                    <span class="text-xs text-indigo-300 font-semibold tracking-widest">
+                        FD. / DEV
+                    </span>
+
+                </div>
+
+                <!-- Conteúdo principal -->
+                <div class="flex flex-col md:flex-row items-center md:items-start gap-9 md:gap-12">
+
+                    <!-- Foto -->
+                    <div class="shrink-0 relative">
+
+                        <div class="profile-image rounded-full">
+                            <img
+                                src="./fotos/Felype.jpg.jpeg"
+                                alt="Fotografia de Felype Dantas dos Santos"
+                                class="w-36 h-36 sm:w-44 sm:h-44 rounded-full object-cover"
+                            >
+                        </div>
+
+                        <div class="absolute bottom-2 right-2 w-5 h-5 bg-green-400 border-4 border-[#111729] rounded-full"
+                            title="Disponível para contato">
+                        </div>
+
+                    </div>
+
+                    <!-- Informações -->
+                    <div class="flex-1 text-center md:text-left">
+
+                        <p class="text-indigo-300 text-sm font-semibold tracking-[0.2em] uppercase mb-3">
+                            Olá, seja bem-vindo!
+                        </p>
+
+                        <h1 class="gradient-text text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+                            Felype Dantas
+                            <br>
+                            dos Santos
+                        </h1>
+
+                        <p class="text-gray-300 text-base sm:text-lg mt-4 font-medium">
+                            Desenvolvedor Back-End
+                        </p>
+
+                        <div class="flex items-center justify-center md:justify-start gap-2 mt-2 text-sm text-gray-500">
+                            <i class="fa-solid fa-code text-indigo-400"></i>
+                            <span>Java & Web Development</span>
+                        </div>
+
+                        <!-- Separador -->
+                        <div class="h-px bg-white/10 my-7"></div>
+
+                        <!-- Contatos -->
+                        <div class="space-y-3">
+
+                            <a href="https://wa.me/5511946400631"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="contact-item flex items-center gap-4 p-3 rounded-xl border border-transparent text-left">
+
+                                <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-green-500/10 text-green-400">
+                                    <i class="fa-brands fa-whatsapp text-xl"></i>
+                                </div>
+
+                                <div>
+                                    <p class="text-xs text-gray-500 uppercase tracking-wider">
+                                        WhatsApp
+                                    </p>
+                                    <p class="text-sm sm:text-base text-gray-200 font-medium">
+                                        (11) 94640-0631
+                                    </p>
+                                </div>
+
+                                <i class="fa-solid fa-arrow-up-right-from-square ml-auto text-gray-600 text-xs"></i>
+
+                            </a>
+
+                            <button
+                                type="button"
+                                onclick="copiarEmail()"
+                                class="contact-item w-full flex items-center gap-4 p-3 rounded-xl border border-transparent text-left">
+
+                                <div class="w-10 h-10 flex items-center justify-center rounded-lg bg-indigo-500/10 text-indigo-400">
+                                    <i class="fa-solid fa-envelope text-lg"></i>
+                                </div>
+
+                                <div class="min-w-0">
+                                    <p class="text-xs text-gray-500 uppercase tracking-wider">
+                                        E-mail
+                                    </p>
+                                    <p class="text-sm sm:text-base text-gray-200 font-medium break-all">
+                                        felyped03@gmail.com
+                                    </p>
+                                </div>
+
+                                <i class="fa-regular fa-copy ml-auto text-gray-600"></i>
+
+                            </button>
+
+                        </div>
+
+                        <!-- Redes sociais -->
+                        <div class="mt-8">
+
+                            <p class="text-xs text-gray-500 uppercase tracking-[0.2em] font-semibold mb-4">
+                                Encontre-me nas redes
+                            </p>
+
+                            <div class="flex justify-center md:justify-start gap-3">
+
+                                <a href="https://www.linkedin.com/in/felype-dantas-dos-santos"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="LinkedIn"
+                                    class="social-link w-12 h-12 flex items-center justify-center rounded-xl border border-white/10 text-gray-300">
+                                    <i class="fa-brands fa-linkedin-in text-xl"></i>
+                                </a>
+
+                                <a href="https://github.com/FelypeDantas"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="GitHub"
+                                    class="social-link w-12 h-12 flex items-center justify-center rounded-xl border border-white/10 text-gray-300">
+                                    <i class="fa-brands fa-github text-xl"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/felype_dantas_santos/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label="Instagram"
+                                    class="social-link w-12 h-12 flex items-center justify-center rounded-xl border border-white/10 text-gray-300">
+                                    <i class="fa-brands fa-instagram text-xl"></i>
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Rodapé -->
+                <div class="border-t border-white/10 mt-10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-3">
+
+                    <p class="text-xs text-gray-500">
+                        © 2026 Felype Dantas dos Santos
+                    </p>
+
+                    <p class="text-xs text-gray-500 flex items-center gap-2">
+                        <i class="fa-solid fa-terminal text-indigo-400"></i>
+                        Desenvolvido com dedicação.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+        <p class="text-center text-gray-600 text-xs mt-6 tracking-wider">
+            CONECTANDO IDEIAS • CONSTRUINDO SOLUÇÕES
+        </p>
+
+    </main>
 
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#6366f1',
-                        dark: '#0f172a'
-                    }
-                }
+        async function copiarEmail() {
+            const email = "felyped03@gmail.com";
+
+            try {
+                await navigator.clipboard.writeText(email);
+                alert("E-mail copiado com sucesso!");
+            } catch (error) {
+                window.location.href = "mailto:" + email;
             }
         }
     </script>
-</head>
-
-<body class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen flex items-center justify-center">
-
-    <!-- Card principal -->
-    <div class="flex flex-col sm:flex-row items-center gap-8 bg-white/5 backdrop-blur-lg border border-white/10 shadow-xl rounded-2xl p-8 max-w-3xl w-full mx-4">
-
-        <!-- Foto -->
-        <div class="relative">
-            <img src="./fotos/Felype.jpg.jpeg"
-                class="w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover border-4 border-primary shadow-lg"
-                alt="Foto Felype">
-
-            <!-- Glow -->
-            <div class="absolute inset-0 rounded-full blur-xl opacity-30 bg-primary"></div>
-        </div>
-
-        <!-- Info -->
-        <div class="text-center sm:text-left">
-
-            <!-- Nome -->
-            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent">
-                Felype Dantas dos Santos
-            </h1>
-
-            <!-- Profissão -->
-            <p class="text-lg sm:text-xl text-gray-300 mt-2">
-                Desenvolvedor Back-End | Java & Web
-            </p>
-
-            <!-- Contato -->
-            <div class="mt-4 space-y-2 text-gray-300">
-
-                <p>
-                    <a href="https://wa.me/5511946400631" target="_blank"
-                        class="hover:text-green-400 transition">
-                        <i class="fab fa-whatsapp"></i> (11) 94640-0631
-                    </a>
-                </p>
-
-                <p>
-                    <a href="mailto:felyped03@gmail.com"
-                        class="hover:text-blue-400 transition">
-                        <i class="fas fa-envelope"></i> felyped03@gmail.com
-                    </a>
-                </p>
-
-            </div>
-
-            <!-- Redes -->
-            <div class="flex justify-center sm:justify-start gap-5 mt-5 text-gray-400">
-
-                <a href="https://www.linkedin.com/in/felype-dantas-dos-santos" target="_blank"
-                    class="hover:text-blue-500 transform hover:scale-110 transition">
-                    <i class="fab fa-linkedin fa-xl"></i>
-                </a>
-
-                <a href="https://github.com/FelypeDantas" target="_blank"
-                    class="hover:text-white transform hover:scale-110 transition">
-                    <i class="fab fa-github fa-xl"></i>
-                </a>
-
-                <a href="https://www.instagram.com/felype_dantas_santos/" target="_blank"
-                    class="hover:text-pink-500 transform hover:scale-110 transition">
-                    <i class="fab fa-instagram fa-xl"></i>
-                </a>
-
-            </div>
-
-        </div>
-    </div>
 
 </body>
-
 </html>
